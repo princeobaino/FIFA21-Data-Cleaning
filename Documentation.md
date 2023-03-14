@@ -4,6 +4,6 @@ This documentation outlines the data cleaning process for the FIFA 21 dataset, w
 # Data Description
 The FIFA 21 dataset contains 18,979 rows and 77 columns. The dataset includes a variety of data types, including whole numbers, text, and dates. The columns contain a range of information related to FIFA player statistics, such as player name, club, nationality, position, earnings, performance metrics and so on.
 
-<img src="https:(https://user-images.githubusercontent.com/127836795/224990469-c430c67c-abc4-4bf2-bba6-bf10af778339.jpg)/>
+<img src="https:https://user-images.githubusercontent.com/127836795/224990469-c430c67c-abc4-4bf2-bba6-bf10af778339.jpg" />
           
 <img src="https://camo.githubusercontent.com/..." data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="200" height="400" />

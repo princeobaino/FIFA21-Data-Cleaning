@@ -10,14 +10,15 @@ The FIFA 21 dataset contains 18,979 rows and 77 columns. The dataset includes a 
 ## Data Cleaning Process
 Using M language and a host of tools available in Power Query Editor, I was able to perform the following transformations to the data set;
 
-- String/Text Cleaning:
-One of the issues identified during the data cleaning process was with the "Club" column. The column contained some dirty data that needed to be cleaned. To clean the data in this column, the Power Query function Text.Clean was used. By applying this transformation, any extraneous whitespace, line breaks, or other non-printable characters were removed from the "Club" column, resulting in a cleaner, more consistent dataset. _[see preview below;]_
+### - String/Text Cleaning:**
+One of the issues identified during the data cleaning process was with the "Club" column. The column contained some dirty data that needed to be cleaned. To clean the data in this column, the Power Query function Text.Clean was used. By applying this transformation, any extraneous whitespace, line breaks, or other non-printable characters were removed from the "Club" column, resulting in a cleaner, more consistent dataset. _[see preview below;]_ 👇
 
 ![](clean2.jpg)
 
-- Contract Duration Calculation:
+### - Contract Duration Calculation:**
 Another issue that was identified during the data cleaning process was with the "Contract" column. The column contained contract start and end dates that were separated by a tilde(~) character.
 To fix this issue, an M code transformation was applied to the dataset. This code uses the if-then-else statement to identify the delimiter, then subtracts the value before delimeter from the value after delimiter. It also returns "No Contract" for records showing "Free" or "Loan" indicating that such players does not have an active contract.
 
-By applying this transformation, the "Contract" column was cleaned and standardized to contain only contract duration information, making it easier to analyze and work with the data.
+By applying this transformation, the "Contract" column was cleaned and standardized to contain only contract duration information, making it easier to analyze and work with the data._[see preview below;]_ 👇
+
 ![](clean4.jpg)

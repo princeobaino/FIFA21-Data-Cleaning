@@ -19,6 +19,6 @@ One of the issues identified during the data cleaning process was with the "Club
 Another issue that was identified during the data cleaning process was with the "Contract" column. The column contained contract start and end dates that were separated by a tilde(~) character.
 To fix this issue, an M code transformation was applied to the dataset. This code uses the if-then-else statement to identify the delimiter, then subtracts the value before delimeter from the value after delimiter. It also returns "No Contract" for records showing "Free" or "Loan" indicating that such players does not have an active contract.
 
-By applying this transformation, the "Contract" column was cleaned and standardized to contain only contract duration information, making it easier to analyze and work with the data._[see preview below;]_ 👇
+By applying this transformation, the "Contract" column was cleaned and standardized to contain only contract duration information, making it easier to analyze and work with the data. _[see preview below;]_ 👇
 
 ![](clean4.jpg)

@@ -10,3 +10,6 @@ The FIFA 21 dataset contains 18,979 rows and 77 columns. The dataset includes a 
 ## Data Cleaning Process
 Using M language and a host of tools available in Power Query Editor, I was able to perform the following transformations to the data set;
 
+- String/Text Cleaning: One of the issues identified during the data cleaning process was with the "Club" column. The column contained some dirty data that needed to be cleaned. To clean the data in this column, the Power Query function Text.Clean was used. By applying this transformation, any extraneous whitespace, line breaks, or other non-printable characters were removed from the "Club" column, resulting in a cleaner, more consistent dataset. _[see preview below;]_
+
+![](clean2.jpg)

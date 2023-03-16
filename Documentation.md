@@ -93,14 +93,7 @@ else Number.Round(Number.FromText(Text.BeforeDelimiter([Height],"'"))*30.48 + Nu
 #### Weight:
 
 ```
-let
-cm = if Text.Contains([Height],"cm") then Number.From( Text.BeforeDelimiter([Height],"cm")) else null,
-ft = Number.From (Text.BeforeDelimiter([Height],"'")),
-inch = Number.From (Text.BetweenDelimiters([Height],"'","""")),
-Result = if cm is null then (ft*30.48) + (inch*2.54) else cm
 
-in
-Result
 ```
 
 ![](hw.jpg)
@@ -133,7 +126,7 @@ in
 Convert1 *1.58
 ```
 
-#### Wages:
+#### Wage:
 
 ```
 let 
@@ -158,3 +151,15 @@ in
 Convert2 *1.58
 ```
 ![](Wages1-04.jpg)
+
+### - W/F, SM IR Columns Transformation
+
+The columns W/F, SM IR Columns had the star "★" sign added to the data. I simply replaced the sign with blank "" and changed the data type to whole number.
+
+![](wf-sm-ir.jpg)
+
+### - Hits Column Transformation
+I worked on the "Hits" column, which had values represented in thousands with the letter "K" (e.g. 1.6K instead of 1600). To convert these values to whole numbers, I removed the "K" and multiplied the remaining value by 1000. The resulting values were then updated in the column.
+
+![](Hits.jpg)
+

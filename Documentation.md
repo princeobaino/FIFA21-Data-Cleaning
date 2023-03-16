@@ -56,3 +56,16 @@ This transformation used the Text.BeforeDelimiter and Text.AfterDelimiter functi
 ![](Contract.jpg)
 
 By applying these transformations, the "Contract" column was cleaned and standardized to include information on the type of agreement for each player, as well as the duration of their contract (if applicable), which improved the accuracy and usefulness of the data.
+
+### - Height and Weight columns Transformation
+
+The "Height" column and "Weight" column contained data that needed to be converted to a consistent unit of measurement.
+Height column
+
+Some entries were in centimeters (cm), while others were in feet and inches (ft/in). The following steps were taken to address this issue:
+
+    Identified all entries in ft/in format using the Text.Contains function.
+    Separated the feet and inches values using the Text.BetweenDelimiters function.
+    Converted the feet value to centimeters by multiplying by 30.48.
+    Converted the inches value to centimeters by multiplying by 2.54.
+    Added the converted feet and inches values to get the final height in centimeters (cm).

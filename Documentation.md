@@ -177,4 +177,3 @@ After completing the cleaning process, several insights could be drawn from the 
 Overall, the insights drawn from the project highlight the importance of thorough data cleaning processes in ensuring the accuracy and reliability of datasets for further analysis. The cleaned dataset can now be used for further analysis, modeling, and visualization.
 
 ![](ty.jpg)
-Thank you for reading

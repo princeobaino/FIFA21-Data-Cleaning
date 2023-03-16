@@ -27,14 +27,6 @@ One of the issues identified during the data cleaning process was with the "Club
 
 ![](clean2.jpg)
 
-### - Contract Duration Calculation:
-Another issue that was identified during the data cleaning process was with the "Contract" column. The column contained contract start and end dates that were separated by a tilde(~) character.
-To fix this issue, an M code transformation was applied to the dataset. This code uses the if-then-else statement to identify the delimiter, then subtracts the value before delimeter from the value after delimiter. It also returns "No Contract" for records showing "Free" or "Loan" indicating that such players does not have an active contract.
-
-By applying this transformation, the "Contract" column was cleaned and standardized to contain only contract duration information, making it easier to analyze and work with the data. _[see preview below;]_ 👇
-
-![](clean4.jpg)
-
 ### - Columns OVA, POT & BOV Transformation
 During the data cleaning process, it was noticed that the columns labelled "OVA", "POT", and "PAC" contained values that were measured as percentages, but were entered as text data types. To correct this issue, a transformation was applied to the dataset to convert the values to a percentage format and change the data type to percentage.
 _[see preview below;]_ 👇
@@ -43,7 +35,7 @@ _[see preview below;]_ 👇
 
 By applying this transformation, the "OVA", "POT", and "PAC" columns were cleaned and standardized to a consistent percentage format, which improved the accuracy and usefulness of the data.
 
-### - 
+### - Contract Column Transfromation
 
 The "Contract" column contained contract start year, contract end year (separated by "~"), as well as the values "Free" (for players not on contract) and "Loan Date" (for players on loan). To improve the accuracy and usefulness of the data, two transformations were applied to this column.
 

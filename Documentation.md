@@ -10,14 +10,16 @@ The FIFA 21 dataset contains 18,979 rows and 77 columns. The dataset includes a 
 ## Data Cleaning Process
 Using M language and a host of tools available in Power Query Editor, I was able to perform the following transformations to the data set;
 
-### - 
+### - Photo URL Correction
 During the data cleaning process, an issue was identified with the "Photo URL" column. The column contained URLs to each player's photo, but it was noticed that the URLs contained an error that caused the photos to be unavailable.
 
 For example, the original URL for one player was:
 https://cdn.sofifa.com/players/158/023/21_60.png
 This URL contained an error that prevented the photo from loading correctly. To fix this issue, a transformation was applied to the dataset to correct the URLs.
+
 ![](PhotoURL.jpg)
 
+By applying this transformation, the "Photo URL" column was cleaned and standardized to contain the correct URLs, which improved the accuracy and completeness of the data.
 
 ### - String/Text Cleaning:
 One of the issues identified during the data cleaning process was with the "Club" column. The column contained some dirty data that needed to be cleaned. To clean the data in this column, the Power Query function Text.Clean was used. By applying this transformation, any extraneous whitespace, line breaks, or other non-printable characters were removed from the "Club" column, resulting in a cleaner, more consistent dataset. _[see preview below;]_ 👇

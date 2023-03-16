@@ -50,3 +50,9 @@ The "Contract" column contained contract start year, contract end year (separate
 First, a new column called "Agreement" was created to indicate the type of agreement for each player.
 
 ![](Agreement.jpg)
+
+Second, a new column called "Contract Duration" was created to calculate the duration of each player's contract in years. This was done using the following transformation:
+
+```
+if Text.Contains([Contract], "~") then Number.From( Text.AfterDelimiter([Contract], "~"))- Number.From( Text.BeforeDelimiter([Contract], "~")) else "No Contract"
+```

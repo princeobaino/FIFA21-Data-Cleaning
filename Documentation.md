@@ -89,3 +89,16 @@ if Text.Contains([Height], "cm")
 then Number.From(Text.BeforeDelimiter([Height],"cm"))
 else Number.Round(Number.FromText(Text.BeforeDelimiter([Height],"'"))*30.48 + Number.FromText(Text.AfterDelimiter([Height],"'"))*2.54)
 ```
+
+#### Weight
+
+```
+let
+cm = if Text.Contains([Height],"cm") then Number.From( Text.BeforeDelimiter([Height],"cm")) else null,
+ft = Number.From (Text.BeforeDelimiter([Height],"'")),
+inch = Number.From (Text.BetweenDelimiters([Height],"'","""")),
+Result = if cm is null then (ft*30.48) + (inch*2.54) else cm
+
+in
+Result
+```

@@ -64,8 +64,8 @@ Height column
 
 Some entries were in centimeters (cm), while others were in feet and inches (ft/in). The following steps were taken to address this issue:
 
-    Identified all entries in ft/in format using the Text.Contains function.
-    Separated the feet and inches values using the Text.BetweenDelimiters function.
-    Converted the feet value to centimeters by multiplying by 30.48.
-    Converted the inches value to centimeters by multiplying by 2.54.
-    Added the converted feet and inches values to get the final height in centimeters (cm).
+1. Identified all entries in ft/in format using the Text.Contains function.
+2. Separated the feet and inches values using the Text.BetweenDelimiters function.
+3. Converted the feet value to centimeters by multiplying by 30.48.
+4. Converted the inches value to centimeters by multiplying by 2.54.
+5. Added the converted feet and inches values to get the final height in centimeters (cm).

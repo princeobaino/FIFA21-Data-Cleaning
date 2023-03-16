@@ -104,3 +104,57 @@ Result
 ```
 
 ![](hw.jpg)
+
+### Value, Wages and Release Clause Columns Transformation
+
+Date in these columns contained the Euro (€) sign and values were entered in different formats. The following steps were taken to clean the data:
+
+1. The Euro sign was removed from the Value, Wages, and Release Clause columns using the Text.Replace function.
+2. The values were then converted to numeric format using the Number.FromText function.T
+3. The values were converted to their respective units, i.e., M for million and K for thousand, as follows:
+4. Values in millions were represented by M (e.g., 1.6M instead of 1600000).
+5. Values in thousands were represented by K (e.g., 2K instead of 2000).
+6. Finally, the values were converted to Dollar ($)
+
+The following code was used to implement these changes:
+
+#### Value:
+
+```
+let 
+ReplaceEuro1 = Text.Replace([Value], "€", ""),
+Convert1 = if Text.Contains(ReplaceEuro1, "M")
+           then Number.FromText(Text.BeforeDelimiter(ReplaceEuro1, "M")) * 1000000
+           else if Text.Contains(ReplaceEuro1, "K")
+           then Number.FromText(Text.BeforeDelimiter(ReplaceEuro1, "K")) * 1000
+           else Number.FromText(ReplaceEuro1)
+
+in
+Convert1 *1.58
+```
+
+#### Wages:
+
+```
+let 
+ReplaceEuro = Text.Replace([Wage], "€", ""),
+Convert = if Text.Contains(ReplaceEuro, "K") then Number.FromText(Text.BeforeDelimiter(ReplaceEuro, "K")) * 1000 
+          else Number.FromText(ReplaceEuro)
+
+in 
+Convert *1.58
+```
+
+#### Release Clause:
+
+```
+let 
+ReplaceEuro2 = Text.Replace([Release Clause], "€", ""),
+Convert2 = if Text.Contains(ReplaceEuro2, "M")
+           then Number.FromText(Text.BeforeDelimiter(ReplaceEuro2, "M")) * 1000000
+           else if Text.Contains(ReplaceEuro2, "K") then Number.FromText(Text.BeforeDelimiter(ReplaceEuro2, "K")) * 1000 else Number.FromText(ReplaceEuro2)
+
+in
+Convert2 *1.58
+```
+![](Wages1-04.jpg)

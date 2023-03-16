@@ -56,5 +56,10 @@ Second, a new column called "Contract Duration" was created to calculate the dur
 ```
 if Text.Contains([Contract], "~")
 then Number.From( Text.AfterDelimiter([Contract], "~"))- Number.From( Text.BeforeDelimiter([Contract], "~"))
-else "No Contract"
+else [Agreement]
 ```
+
+This transformation used the Text.BeforeDelimiter and Text.AfterDelimiter functions to extract the contract start year and contract end year from each row in the "Contract" column, and then calculated the difference between them to determine the duration of the contract in years. If the "Agreement" column indicated that the player was not on a contract ("Free" or "Loan"), the corresponding row in the "Agreement" column is returned.
+
+![](Contract.jpg)
+

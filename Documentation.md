@@ -60,7 +60,8 @@ By applying these transformations, the "Contract" column was cleaned and standar
 ### - Height and Weight columns Transformation
 
 The "Height" column and "Weight" column contained data that needed to be converted to a consistent unit of measurement.
-Height column
+
+#### Height column
 
 Some entries were in centimeters (cm), while others were in feet and inches (ft/in). The following steps were taken to address this issue:
 

@@ -20,6 +20,7 @@ This URL contained an error that prevented the photo from loading correctly. To 
 ![](PhotoURL.jpg)
 
 By applying this transformation, the "Photo URL" column was cleaned and standardized to contain the correct URLs, which improved the accuracy and completeness of the data.
+https://cdn.sofifa.net/players/158/023/21_240.png 
 
 ### - String/Text Cleaning:
 One of the issues identified during the data cleaning process was with the "Club" column. The column contained some dirty data that needed to be cleaned. To clean the data in this column, the Power Query function Text.Clean was used. By applying this transformation, any extraneous whitespace, line breaks, or other non-printable characters were removed from the "Club" column, resulting in a cleaner, more consistent dataset. _[see preview below;]_ 👇
@@ -33,3 +34,9 @@ To fix this issue, an M code transformation was applied to the dataset. This cod
 By applying this transformation, the "Contract" column was cleaned and standardized to contain only contract duration information, making it easier to analyze and work with the data. _[see preview below;]_ 👇
 
 ![](clean4.jpg)
+
+### - Columns OVA, POT & BOV Transformation
+During the data cleaning process, it was noticed that the columns labelled "OVA", "POT", and "PAC" contained values that were measured as percentages, but were entered as text data types. To correct this issue, a transformation was applied to the dataset to convert the values to a percentage format and change the data type to percentage.
+_[see preview below;]_ 👇
+
+![](ova-pot-bov.jpg)

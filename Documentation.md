@@ -40,3 +40,13 @@ During the data cleaning process, it was noticed that the columns labelled "OVA"
 _[see preview below;]_ 👇
 
 ![](ova-pot-bov.jpg)
+
+By applying this transformation, the "OVA", "POT", and "PAC" columns were cleaned and standardized to a consistent percentage format, which improved the accuracy and usefulness of the data.
+
+### - 
+
+The "Contract" column contained contract start year, contract end year (separated by "~"), as well as the values "Free" (for players not on contract) and "Loan Date" (for players on loan). To improve the accuracy and usefulness of the data, two transformations were applied to this column.
+
+First, a new column called "Agreement" was created to indicate the type of agreement for each player.
+
+![](Agreement.jpg)

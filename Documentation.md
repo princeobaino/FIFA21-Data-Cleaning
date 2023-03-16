@@ -163,3 +163,18 @@ I worked on the "Hits" column, which had values represented in thousands with th
 
 ![](Hits.jpg)
 
+## Conclusion
+After completing the data cleaning process, the dataset was thoroughly reviewed and analyzed to draw insights into the state of the FIFA21 player data.
+
+The dataset contained 18,979 rows and 77 columns with various data types, including whole numbers, text, and dates.
+
+Several columns had issues that required attention, including the "Club," "Contract," "Photo URL," "OVA," "POT," "Height," "Weight" and other columns.
+
+Specific data cleaning activities were performed on each of these columns, including using the Text.Clean function to fix issues in the "Club" column, creating new columns to categorize agreement type and calculate contract duration in the "Contract" column, and converting measurements in the "Height" and "Weight" columns to a consistent unit of measurement.
+
+After completing the cleaning process, several insights could be drawn from the dataset, including the distribution of player attributes, such as overall rating, potential rating, and market value.
+
+Overall, the insights drawn from the project highlight the importance of thorough data cleaning processes in ensuring the accuracy and reliability of datasets for further analysis. The cleaned dataset can now be used for further analysis, modeling, and visualization.
+
+![](ty.jpg)
+Thank you for reading

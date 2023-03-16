@@ -70,3 +70,22 @@ Some entries were in centimeters (cm), while others were in feet and inches (ft/
 3. Converted the feet value to centimeters by multiplying by 30.48.
 4. Converted the inches value to centimeters by multiplying by 2.54.
 5. Added the converted feet and inches values to get the final height in centimeters (cm).
+
+#### Weight column
+
+Some entries were in kilograms (kg), while others were in pounds (lbs). The following steps were taken to address this issue:
+
+1. Identified all entries in lbs format using the Text.Contains function.
+2. Converted the lbs value to kilograms by dividing by 2.205.
+
+After these transformations, both the Height and Weight columns were consistent and measured in cm and kg respectively.
+
+The following Power Query M code was used to carry out the transformations:
+
+#### Height:
+
+```
+if Text.Contains([Height], "cm")
+then Number.From(Text.BeforeDelimiter([Height],"cm"))
+else Number.Round(Number.FromText(Text.BeforeDelimiter([Height],"'"))*30.48 + Number.FromText(Text.AfterDelimiter([Height],"'"))*2.54)
+```

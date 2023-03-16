@@ -55,3 +55,4 @@ This transformation used the Text.BeforeDelimiter and Text.AfterDelimiter functi
 
 ![](Contract.jpg)
 
+By applying these transformations, the "Contract" column was cleaned and standardized to include information on the type of agreement for each player, as well as the duration of their contract (if applicable), which improved the accuracy and usefulness of the data.

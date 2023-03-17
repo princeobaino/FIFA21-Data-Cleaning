@@ -28,7 +28,7 @@ One of the issues identified during the data cleaning process was with the "Club
 ![](clean2.jpg)
 
 ### - Columns OVA, POT & BOV Transformation
-During the data cleaning process, it was noticed that the columns labelled "OVA", "POT", and "PAC" contained values that were measured as percentages, but were entered as text data types. To correct this issue, a transformation was applied to the dataset to convert the values to a percentage format and change the data type to percentage.
+During the data cleaning process, it was noticed that the columns labelled "OVA", "POT", and "BOV" contained values that were measured as percentages, but were entered as text data types. To correct this issue, a transformation was applied to the dataset to convert the values to a percentage format and change the data type to percentage.
 _[see preview below;]_ 👇
 
 ![](ova-pot-bov.jpg)
